@@ -1,3 +1,6 @@
+//by-Tushar Gupta
+//Example:- Loadingscreen2
+
 import 'package:flutter/material.dart';
 import 'package:flutter/animation.dart';
 
