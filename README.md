@@ -10,7 +10,7 @@ loading1 |<img src="https://github.com/Tushargupta9800/flutter-Simple-Animations
 | loading5 | <img src="https://github.com/Tushargupta9800/flutter-Simple-Animations-for-loading-screen/blob/master/screenshot/loading5.gif" height="350em" /> | [code](https://github.com/Tushargupta9800/flutter-Simple-Animations-for-loading-screen/blob/master/loading5.dart) | loading5(xpos: 200, ypos: 350, color: Colors.grey),
 
 
-## more to come later
+## more cool stuf to come later so keep a watch on this repo.
 
 # How to use these loadings?
 1) Clone and star this repo.
