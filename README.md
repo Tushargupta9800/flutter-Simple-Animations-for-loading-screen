@@ -15,7 +15,7 @@ loading1 |<img src="https://github.com/Tushargupta9800/flutter-Simple-Animations
 # How to use these loadings?
 1) Clone and star this repo.
 2) Create a new flutter project.
-3) Add the loading(i) file(whichever you like out of them) in your project.
+3) Add the loading(i).dart file(whichever you like out of them) in your project.
 4) import the loading(i).dart file in your main.dart file.
-5) call the function loading(i) as stated in the table above. (still confused see main.dart file)
-6) that's it enjoy the loadings.
+5) call the function loading(i) as stated in the table above. (still confused?? see main.dart file)
+6) That's it enjoy the loadings.
