@@ -1,30 +1,35 @@
-////////////////////////////////////////////////////////////////////////
-///                         by- Tushar Gupta                         ///
-////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+///               - Tushar Gupta                     ///
+////////////////////////////////////////////////////////
 
 import 'package:flutter/material.dart';
 
-void main(){
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: Home(),
-  ));
-}
-
-class Home extends StatefulWidget {
+class loading3 extends StatefulWidget {
+  Color color;
+  loading3({Key key,@required this.color}):super(key: key);
   @override
-  _HomeState createState() => _HomeState();
+  _loading3State createState() => _loading3State();
 }
 
 AnimationController animationController;
 Animation animation;
 Tween tween;
+var height;
+var width;
+Color fill;
 
-class _HomeState extends State<Home> with TickerProviderStateMixin{
+class _loading3State extends State<loading3> with TickerProviderStateMixin{
+
+  findsize(){
+    width = MediaQuery.of(context).size.width;
+    height = MediaQuery.of(context).size.height;
+    return Container();
+  }
 
   @override
   void initState() {
     super.initState();
+    fill = widget.color;
     animationController = AnimationController(vsync: this, duration: Duration(seconds: 1));
     tween = Tween<double>(begin: 0.0,end: 1.0);
     animation = tween.animate(animationController);
@@ -40,13 +45,17 @@ class _HomeState extends State<Home> with TickerProviderStateMixin{
   }
 
   @override
+  void dispose() {
+    animationController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Container(
-        color: Colors.black,
-        child: CustomPaint(
-          painter: iwanttopaint(),
-        )
+    return Container(
+      child: CustomPaint(
+        child: findsize(),
+        painter: iwanttopaint(),
       ),
     );
   }
@@ -58,11 +67,11 @@ class iwanttopaint extends CustomPainter{
   void paint(Canvas canvas, Size size) {
     var path = Path();
     path.moveTo(0, 0);
-    path.lineTo(0, size.height * 0.08);
-    path.quadraticBezierTo(size.width * 0.5, size.height * 0.2 + (-130 + animation.value*100), size.width, size.height * 0.08);
-    path.lineTo(size.width, 0.0);
+    path.lineTo(0, height * 0.08);
+    path.quadraticBezierTo(width * 0.5, height * 0.2 + (-130 + animation.value*100), width, height * 0.08);
+    path.lineTo(width, 0.0);
     var paint = Paint();
-    paint.color = Colors.yellowAccent;
+    paint.color = fill;
     canvas.drawPath(path, paint);
   }
 
