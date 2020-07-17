@@ -1,28 +1,27 @@
-//by-Tushar Gupta
-//Example:- Loadingscreen2
+/////////////////////////////////////////////////////////////
+///                     - Tushar Gupta                    ///
+/////////////////////////////////////////////////////////////
 
 import 'package:flutter/material.dart';
 import 'package:flutter/animation.dart';
 
-void main(){
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: Home(),
-  ));
-}
-
-class Home extends StatefulWidget {
+class loading2 extends StatefulWidget {
+  Color fromcolor;
+  Color tocolor;
+  loading2({Key key,@required this.fromcolor,@required this.tocolor}):super(key: key);
   @override
-  _HomeState createState() => _HomeState();
+  _loading2State createState() => _loading2State();
 }
 
-class _HomeState extends State<Home> with TickerProviderStateMixin{
+class _loading2State extends State<loading2> with TickerProviderStateMixin{
 
   AnimationController animationController;
   AnimationController _controller;
   Animation animation;
   Animation animation1;
   Tween tween;
+  Color fill1;
+  Color fill2;
 
   createbubble(double begin, double end){
     animation = tween.animate(CurvedAnimation(
@@ -37,7 +36,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin{
         animationController.forward();
       }
     });
-    animation1 = ColorTween(begin: Colors.yellowAccent,end: Colors.redAccent).animate(_controller);
+    animation1 = ColorTween(begin: fill1,end: fill2).animate(_controller);
     animation1.addListener(() {setState(() {});});
     animation1.addStatusListener((status) {
       if(status == AnimationStatus.completed){
@@ -63,6 +62,8 @@ class _HomeState extends State<Home> with TickerProviderStateMixin{
   @override
   void initState() {
     super.initState();
+    fill1 = widget.fromcolor;
+    fill2 = widget.tocolor;
     animationController = AnimationController(vsync: this, duration: Duration(milliseconds: 1500));
     _controller = AnimationController(vsync: this, duration: Duration(milliseconds: 3000));
     tween = Tween<double>(begin: 0.0,end: 1.0);
@@ -72,8 +73,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin{
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
+    return Center(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -84,7 +84,6 @@ class _HomeState extends State<Home> with TickerProviderStateMixin{
             createbubble(0.8,1.0),
           ],
         ),
-      ),
-    );
+      );
   }
 }
