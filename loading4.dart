@@ -4,26 +4,31 @@
 
 import 'package:flutter/material.dart';
 
-void main(){
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: Home(),
-  ));
-}
-
-class Home extends StatefulWidget {
+class loading4 extends StatefulWidget {
+  Color color;
+  loading4({Key key,@required this.color}):super(key: key);
   @override
-  _HomeState createState() => _HomeState();
+  _loading4State createState() => _loading4State();
 }
 
+var Screenwidth;
+var height;
+Color fill;
 AnimationController animationController;
 Animation animation;
 Tween tween;
 
-class _HomeState extends State<Home> with TickerProviderStateMixin{
+class _loading4State extends State<loading4> with TickerProviderStateMixin{
+
+  Findsize(){
+    Screenwidth = MediaQuery.of(context).size.width;
+    height = MediaQuery.of(context).size.height;
+    return Container();
+  }
 
   @override
   void initState() {
+    fill = widget.color;
     super.initState();
     animationController = AnimationController(vsync: this, duration: Duration(seconds: 1));
     tween = Tween<double>(begin: 0.0,end: 1.0);
@@ -41,13 +46,11 @@ class _HomeState extends State<Home> with TickerProviderStateMixin{
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Container(
-        color: Colors.black,
-        child: CustomPaint(
-          painter: iwanttopaint(),
-        )
-      ),
+    return Container(
+      child: CustomPaint(
+        child: Findsize(),
+        painter: iwanttopaint(),
+      )
     );
   }
 }
@@ -57,13 +60,13 @@ class iwanttopaint extends CustomPainter{
   @override
   void paint(Canvas canvas, Size size) {
     var path = Path();
-    path.moveTo(0, size.height);
-    path.lineTo(0, size.height * 0.92);
-    path.quadraticBezierTo(size.width * 0.25, size.height + (-120 + animation.value*100), size.width * 0.5, size.height * 0.92);
-    path.quadraticBezierTo(size.width * 0.75, size.height  - animation.value*100, size.width , size.height * 0.92);
-    path.lineTo(size.width, size.height);
+    path.moveTo(0, height);
+    path.lineTo(0, height * 0.92);
+    path.quadraticBezierTo(Screenwidth * 0.25, height - (1 - animation.value)*(Screenwidth * 0.25), Screenwidth * 0.5, height * 0.92);
+    path.quadraticBezierTo(Screenwidth * 0.75, height  - animation.value*(Screenwidth * 0.25), Screenwidth , height * 0.92);
+    path.lineTo(Screenwidth, height);
     var paint = Paint();
-    paint.color = Colors.yellowAccent;
+    paint.color = fill;
     canvas.drawPath(path, paint);
   }
 
