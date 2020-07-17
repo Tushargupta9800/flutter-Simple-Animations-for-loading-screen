@@ -1,7 +1,7 @@
 # flutter-Simple-Animations-for-loading-screen
 
 # screenshots
-|Sr. No. |GIF |Code| function to use the loading|
+|Sr. No. |GIF |Code| function to use this loading|
 :----------:|:-----------:|:-------------:|:------------:
 loading1 |<img src="https://github.com/Tushargupta9800/flutter-Simple-Animations-for-loading-screen/blob/master/screenshot/loading1.gif" height="500em" />|[code](https://github.com/Tushargupta9800/flutter-Simple-Animations-for-loading-screen/blob/master/loading1.dart) | loading1(color: Colors.redAccent,),
 | loading2 | <img src="https://github.com/Tushargupta9800/flutter-Simple-Animations-for-loading-screen/blob/master/screenshot/loading2.gif" height="500em" /> | [code](https://github.com/Tushargupta9800/flutter-Simple-Animations-for-loading-screen/blob/master/loading2.dart) |  loading2(fromcolor: Colors.yellowAccent, tocolor: Colors.redAccent),
