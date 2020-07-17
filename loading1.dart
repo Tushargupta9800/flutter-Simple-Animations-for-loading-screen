@@ -6,8 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/animation.dart';
 import 'dart:math' as math;
 
-import 'package:flutterapp/loading1.dart';
-
 class loading1 extends StatefulWidget {
   Color color;
   loading1({Key key,@required this.color}):super(key: key);
