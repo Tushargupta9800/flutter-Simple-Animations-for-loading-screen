@@ -1,29 +1,27 @@
-// by-Tushar Gupta
-//example:- Loadingscreen1
+/////////////////////////////////////////////////////////////
+///                    - Tushar Gupta                     ///
+/////////////////////////////////////////////////////////////
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/animation.dart';
 import 'dart:math' as math;
 
-void main(){
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: Home(),
-  ));
-}
+import 'package:flutterapp/loading1.dart';
 
-class Home extends StatefulWidget {
+class loading1 extends StatefulWidget {
+  Color color;
+  loading1({Key key,@required this.color}):super(key: key);
   @override
-  _HomeState createState() => _HomeState();
+  _loading1State createState() => _loading1State();
 }
 
-class _HomeState extends State<Home> with TickerProviderStateMixin{
+class _loading1State extends State<loading1> with TickerProviderStateMixin{
 
   AnimationController animationController;
   Animation animation;
   Tween tween;
   bool isclockwise = true;
+  Color fill;
 
   doanimation(double begin, double end){
     return tween.animate(CurvedAnimation(
@@ -49,12 +47,12 @@ class _HomeState extends State<Home> with TickerProviderStateMixin{
             :Matrix4.rotationZ(-(anim.value * math.pi * 2.0 * 0.5)),
     alignment: Alignment.centerRight,
         child: Container(
-          margin: EdgeInsets.only(left: 0.0),
+//          margin: EdgeInsets.only(left: 0.0),
           height: 10.0,
           width: 40.0,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15.0),
-            color: Colors.green,
+            color: fill,
           ),
         ),
       ),
@@ -70,6 +68,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin{
   @override
   void initState() {
     super.initState();
+    fill = widget.color;
     animationController = AnimationController(vsync: this, duration: Duration(seconds: 5));
     tween = Tween<double>(begin: 0.0, end: 1.0);
     animationController.repeat();
@@ -77,8 +76,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin{
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
+    return Center(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -88,7 +86,6 @@ class _HomeState extends State<Home> with TickerProviderStateMixin{
               brick(false,0.3, 0.4, 0.6, 0.7),
               brick(true,0.4, 0.5,0.5, 0.6),
             ],
-      )),
-    );
+      ));
   }
 }
