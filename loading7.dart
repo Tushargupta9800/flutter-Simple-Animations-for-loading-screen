@@ -3,12 +3,10 @@ import 'package:flutter/material.dart';
 class loading7 extends StatefulWidget {
   Color BackColor;
   Color CircleColor;
-  double StrokeWidth;
 
   loading7({Key key,
     @required this.BackColor,
     @required this.CircleColor,
-    @required this.StrokeWidth,
   }):super(key: key);
 
   @override
@@ -36,7 +34,6 @@ class _loading7State extends State<loading7> with TickerProviderStateMixin{
   void initState() {
     fill = widget.BackColor;
     fill2 = widget.CircleColor;
-    stroke = widget.StrokeWidth;
     super.initState();
     animationController = AnimationController(vsync: this, duration: Duration(milliseconds: 1000));
     tween = Tween<double>(begin: 0.0,end: 1.0);
