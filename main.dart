@@ -32,6 +32,7 @@ class _HomeState extends State<Home> {
           loading3(color: Colors.redAccent),
           loading4(color: Colors.yellowAccent),
           loading5(xpos: 200, ypos: 450, color: Colors.grey),
+          loading7(BackColor: Colors.white, CircleColor: Colors.black,),
         ],
       ),
     );
