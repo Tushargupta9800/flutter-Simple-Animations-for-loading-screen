@@ -57,7 +57,7 @@ class _loading7State extends State<loading7> with TickerProviderStateMixin{
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Center(
         child: CustomPaint(
           painter: iwanttopaint(),
           child: getmidpoint(),
