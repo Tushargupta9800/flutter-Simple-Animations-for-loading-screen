@@ -8,6 +8,10 @@ import 'loading1.dart';
 import 'loading2.dart';
 import 'loading3.dart';
 import 'loading4.dart';
+import 'loading5.dart';
+import 'loading6.dart';
+import 'loading7.dart';
+import 'loading8.dart';
 
 void main(){
   runApp(MaterialApp(
@@ -33,6 +37,13 @@ class _HomeState extends State<Home> {
           loading4(color: Colors.yellowAccent),
           loading5(xpos: 200, ypos: 450, color: Colors.grey),
           loading7(BackColor: Colors.white, CircleColor: Colors.black,),
+          loading8(color1: Colors.teal,
+                        color2: Colors.yellowAccent,
+                        color3: Colors.red,
+                        color4: Colors.black,
+                        Chooseoutof4: 3,
+                        pos: Offset(MediaQuery.of(context).size.width*0.5,MediaQuery.of(context).size.height*0.5),
+                      ),
         ],
       ),
     );
