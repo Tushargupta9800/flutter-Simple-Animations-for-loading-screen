@@ -1,4 +1,6 @@
 # flutter-Simple-Animations-for-loading-screen
+The main motive of this repository for me is to learn flutter animation and custom painting better.<br/> If you see anything wrong with any code and do not hesitate to raise the issue. 😊😊
+
 
 # screenshots
 |Sr. No. |GIF |Code| function to use this loading|
@@ -12,6 +14,8 @@ loading1 |<img src="https://github.com/Tushargupta9800/flutter-Simple-Animations
 | loading6 | <img src="https://github.com/Tushargupta9800/flutter-Simple-Animations-for-loading-screen/blob/master/screenshot/loading6ii.gif" height="350em" /> | [code](https://github.com/Tushargupta9800/flutter-Simple-Animations-for-loading-screen/blob/master/loading6.dart) | loading6(pos: Offset(MediaQuery.of(context).size.width * 0.5,<br/>MediaQuery.of(context).size.height * 0.5), <br/>radius: 0.0,<br/> color: Colors.redAccent,<br/> jump: 50.0, <br/>StrokeWidth: 10.0),
 | loading7 | <img src="https://github.com/Tushargupta9800/flutter-Simple-Animations-for-loading-screen/blob/master/screenshot/loading7.gif" height="350em" /> | [code](https://github.com/Tushargupta9800/flutter-Simple-Animations-for-loading-screen/blob/master/loading7.dart) | loading7(BackColor: Colors.white, CircleColor: Colors.black,),
 | loading8 | <img src="https://github.com/Tushargupta9800/flutter-Simple-Animations-for-loading-screen/blob/master/screenshot/loading8.gif" height="350em" /> | [code](https://github.com/Tushargupta9800/flutter-Simple-Animations-for-loading-screen/blob/master/loading8.dart) | loading8(color1: Colors.teal,<br/>color2: Colors.yellowAccent,<br/>color3: Colors.red,<br/>color4: Colors.black,<br/>Chooseoutof4: 3,<br/>pos: Offset(MediaQuery.of(context).size.width*0.5,<br/>MediaQuery.of(context).size.height*0.5),<br/>),
+
+### Note:- Actual animation is far better then above GIFs.
 
 ## more cool stuff to come soon so keep a watch on this repo.
 
