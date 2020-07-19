@@ -1,12 +1,9 @@
-////////////////////////////////////////////////////////
-///               - Tushar Gupta                     ///
-////////////////////////////////////////////////////////
-
 import 'package:flutter/material.dart';
 
 class loading3 extends StatefulWidget {
   Color color;
-  loading3({Key key,@required this.color}):super(key: key);
+  Widget child;
+  loading3({Key key,@required this.color,@required this.child}):super(key: key);
   @override
   _loading3State createState() => _loading3State();
 }
@@ -23,7 +20,7 @@ class _loading3State extends State<loading3> with TickerProviderStateMixin{
   findsize(){
     width = MediaQuery.of(context).size.width;
     height = MediaQuery.of(context).size.height;
-    return Container();
+    return widget.child;
   }
 
   @override
