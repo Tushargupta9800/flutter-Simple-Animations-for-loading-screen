@@ -1,5 +1,8 @@
 # flutter-Simple-Animations-for-loading-screen
-The main motive of this repository for me is to learn flutter animation and custom painting better.<br/> If you see anything wrong with any code then do not hesitate to raise the issue. 😊😊
+Simple pages which uses animation and custom painter<br/>
+Total 8 loading screens are updated in this repo<br/>
+The main motive of this repository for me is to learn flutter animation and custom painting better.
+<br/> If you see anything wrong with any code then do not hesitate to raise the issue. 😊😊
 
 
 # screenshots
